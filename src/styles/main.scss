@@ -1,0 +1,79 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
+$atom-dark: #282C34;
+$atom-red: #E06C75;
+$atom-gold: #E5C07B;
+$atom-orange: #D19A66;
+$atom-purple: #C678DD;
+$atom-grey: #ABB7BF;
+$atom-green: #98C379;
+$atom-blue: #61AFEF;
+$atom-darker: #21242B;
+
+.tag-symbol { color: $atom-grey; }
+.tag-type { color: $atom-red; }
+.tag-content {color: $atom-grey;}
+
+html {
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+    scroll-behavior: smooth;
+}
+
+body {
+    height: 100vh;
+    overflow: hidden;
+}
+
+
+
+*, *::before, *::after {
+    box-sizing: inherit;
+    margin: 0;
+    padding: 0;
+}
+
+.content {
+    width: 100%;
+    height: 100%;
+    scroll-snap-type: y mandatory;
+    overflow-y: scroll;
+    .navbar{
+        background-color: $atom-darker;
+        position: fixed;
+        width: 100%;
+        display: flex;
+        justify-content: space-evenly;
+        padding: 1.5rem;
+
+        .nav-item {
+            color: $atom-grey;
+            text-decoration: none;
+            font-size: 2rem;
+            &:hover {
+                color: $atom-red;
+            }
+        }
+    }
+
+// SECTION
+    .introduction-slide {
+        scroll-snap-align: start;
+        padding: 0 100px 0 100px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        width: 100vw;
+        height: 100vh;
+        background-color: $atom-dark;
+
+        .introduction{
+            font-size: 3.5rem;
+        }
+    }
+
+// SECTION
+    .
+    
+}
+
