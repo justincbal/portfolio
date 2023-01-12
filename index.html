@@ -11,13 +11,13 @@
     
     <div class="content">
         <nav class="navbar">
-            <a href="#test" class="nav-item">About me</a>
-            <a href="#test2" class="nav-item">Skills & Technologies</a>
+            <a href="#about" class="nav-item">About me</a>
+            <a href="#skills" class="nav-item">Skills & Technologies</a>
             <a href="" class="nav-item">Skill showcase</a>
             <a href="" class="nav-item">Contact me</a>
         </nav>
 
-        <div class="introduction-slide" id="test2">
+        <div class="introduction-slide section" id="test2">
             <h1 class="introduction tag-type">
                 <span class="tag-symbol">&#60</span>h1<span class="tag-symbol">&#62</span>
                 <span class="tag-content">Hi, I'm Justin</span>
@@ -25,17 +25,84 @@
             </h1>
             <h1 class="introduction tag-type">
                 <span class="tag-symbol">&#60</span>h1<span class="tag-symbol">&#62</span>
-                <span class="tag-content">I'm a Frontend Developer</span>
+                <span class="tag-content">I'm a <span class="bg-red">Frontend Developer</span></span>
                 <span class="tag-symbol">&#60/</span>h1<span class="tag-symbol">&#62</span>
             </h1>
         </div>
 
-        <div class="aboutme-slide" id="test">
-            
-                
+        <div class="aboutme-slide section" id="about">
+            <h1 class="section-open">
+                <span class="grey">&#60;</span><span class="red">section </span><span class="orange">id</span><span class="grey">=</span><span class="green">About-Me</span><span class="tag-symbol">&#62</span>
+            </h1>
+
+
+            <h2 class="aboutme" style="line-height: 1.3">
+                <span class="purple">const</span><span class="orange"> AboutMe </span><span class="blue">= </span><span class="gold">{</span><br>
+                <span class="red tab">name</span><span class="blue"> :&ensp;</span><span class="green">'Justin Balagtas'</span><span class="grey">,</span><br>
+                <span class="red tab">age</span><span class="blue"> :&ensp;</span><span class="orange">24</span><span class="grey">,</span><br>
+                <span class="red tab">location</span><span class="blue"> :&emsp;</span><span class="green">'Toronto, ON'</span><span class="grey">,</span><br>
+                <span class="red tab">role</span><span class="blue"> :&ensp;</span><span class="green">'Frontend Developer'</span><span class="grey">,</span><br>
+                <span class="red tab">biography</span><span class="blue"> :&ensp;</span><br>
+                <span class="green tab">'Hi, my name is Justin Balagtas</span><br>
+                <span class="green tab">I am a 24 year old Frontend Developer based in Toronto, ON. </span><br>
+                <span class="green tab">I have attended Seneca College for Computer Programming </span><br>
+                <span class="green tab">where I learned the basics in various languages and technologies. </span><br>
+                <span class="green tab">Since then I have been furthering my knowledge in web development through </span><br>
+                <span class="green tab"><a href="https://www.theodinproject.com/about" target="_blank" class="orange" style="text-decoration: none;">The Odin Project</a>'</span><span class="grey" style="font-size: 1.5rem;"> &#60;--- click for info</span><br>
+                <span class="orange">}</span>
+            </h2>
+
+
+
+            <h1 class="section-close">
+                <span class="grey">&#60;/</span><span class="red">section</span><span class="tag-symbol">&#62</span>
+            </h1>
         </div>
 
-        
+
+
+        <div class="skills section" id="skills">
+            <h1 class="section-open">
+                <span class="grey">&#60;</span><span class="red">section </span><span class="orange">id</span><span class="grey">=</span><span class="green">Skills</span><span class="tag-symbol">&#62</span>
+            </h1>
+
+                <div class="skill-group">
+                    <h2 class="ctr"><span class="orange">.frontend</span><span class="blue"> {</span></h2>
+                        <div class="skill">
+                            <h2 class="grey tab">HTML5:</h2><img src="../src/img/html-5.png" alt="" class="img">
+                        </div>
+
+                        <div class="skill">
+                            <h2 class="grey tab">CSS3:</h2><img src="../src/img/css-3.png" alt="" class="img">
+                        </div>
+
+                        <div class="skill">
+                            <h2 class="grey tab">SCSS:</h2><img src="../src/img/sass.png" alt="" class="img">
+                        </div>
+
+                        <div class="skill">
+                            <h2 class="grey tab">JAVASCRIPT:</h2><img src="../src/img/js.png" alt="" class="img">
+                        </div>
+
+                    <h2 class="blue ctr">}</h2>
+                </div>   
+                
+                <div class="skill-group">
+                    <h2><span class="orange">.backend</span><span class="blue"> {</span></h2>
+                    <h2 class="blue">}</h2>
+                </div> 
+
+                <div class="skill-group">
+                    <h2><span class="orange">.other</span><span class="blue"> {</span></h2>
+                    <h2 class="blue">}</h2>
+                </div> 
+
+
+            <h1 class="section-close">
+                <span class="grey">&#60;/</span><span class="red">section</span><span class="tag-symbol">&#62</span>
+            </h1>
+
+        </div>
     </div>
 </body>
 </html>
