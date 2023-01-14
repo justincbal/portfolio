@@ -1,176 +1,152 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata&family=Source+Code+Pro&display=swap');
 
-$atom-dark: #282C34;
-$atom-red: #E06C75;
-$atom-gold: #E5C07B;
-$atom-orange: #D19A66;
-$atom-purple: #C678DD;
-$atom-grey: #ABB7BF;
-$atom-green: #98C379;
-$atom-blue: #61AFEF;
-$atom-darker: #21242B;
+// Variables 
+$atom-contrast: #21252b;
+$atom-background: #282c34;
+$atom-text: #abb2bf;
 
-.tag-symbol { color: $atom-grey; }
-.tag-type { color: $atom-red; }
-.tag-content {color: $atom-grey;}
-.purple { color: $atom-purple; }
-.orange { color: $atom-orange; }
-.gold { color: $atom-gold; }
-.blue { color: $atom-blue;}
-.grey { color: $atom-grey; }
-.red { color: $atom-red; }
-.green { color: $atom-green; }
-.bg-red {
+$atom-red: #e06c75;
+$atom-purp: #c679dd;
+$atom-yellow: #e5c17c;
+$atom-orange: #d19a66;
+$atom-green: #98c379;
+$atom-cyan: #57b6c2;
+
+
+.grey { color: $atom-text;}
+.red { color: #e06c75;}
+.purp { color: $atom-purp;}
+.orange {color: $atom-orange;}
+.yellow {color: $atom-yellow;}
+.green { color: $atom-green;}
+.cyan { color: $atom-cyan;}
+.hl-red {
     background-color: $atom-red;
-    padding: 0 10px 0 10px;
-    color: white;
+    color: black;
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 html {
-    box-sizing: border-box;
-    font-family: 'Montserrat', sans-serif;
-    scroll-behavior: smooth;
+    font-family: 'Inconsolata', monospace;
+
 }
-
-body {
-    height: 100vh;
-}
-
-
 
 *, *::before, *::after {
     box-sizing: inherit;
-    margin: 0;
-    padding: 0;
 }
 
 .content {
-    width: 100%;
-    height: 100%;
-    .navbar{
-        position: fixed;
-        z-index: 100;
+    padding: 0 2vw;
+    padding-bottom: 5vh;
+    background-color: $atom-contrast;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+
+    .toolbar {
         display: flex;
-        flex-direction: column;
-        justify-content: space-evenly;
-        padding: 1.5rem;
-        right: 3%;
-        top: 20%;
-        transform: translateY(-50%);
-        .nav-item {
-            color: $atom-grey;
-            text-align: end;
-            text-decoration: none;
-            font-size: 1.5rem;
-            &:hover {
-                color: $atom-red;
+        align-items: center;
+        width: 100%;
+
+        > img {
+            width: 65px;
+        }
+
+        > ul {
+            display: flex;
+            width: 700px;
+            height: 100%;
+            justify-content: space-between;
+            align-items: center;
+
+            > li {
+                list-style: none;
+                text-decoration: none;
+                color: $atom-text;
+                font-size: 2rem;
+                height: 70%;
+                display: flex;
+                padding: 10px 25px;
+                justify-content: center;
+                align-items: center;
+
+                &:hover {
+                    background-color: #383d48;
+                    border-radius: 25px;
+                }
             }
         }
     }
 
-// SECTION
-    .introduction-slide {
-        .introduction{
-            font-size: 3.5rem;
+    // Navigation Bar
+    .navbar {
+        display: flex;
+        width: 100%;
+
+        > a{
+            text-decoration: none;
+        }
+    
+        .nav-item {
+            border-right: black 1px solid;
+            padding: 10px 25px;
+            display: flex;
+
+            .nav-img {
+                width: 65px;
+                height: 65px;
+            }
+
+            .nav-title {
+                color: $atom-text;
+            }
+
+            &:hover {
+                background-color: $atom-background;
+                cursor: pointer;
+            }
         }
     }
 
-// SECTION
+    // Code section
+    .code-section {
+        background-color: $atom-background;
+        flex-grow: 1;
+        overflow-y: scroll;
+        
+        scroll-behavior: smooth;
 
-    .aboutme-slide {
-        position: relative;
-        .section-open, .section-close {
-            font-size: 3.5rem;
-            position: absolute;
-        }
+        &::-webkit-scrollbar {display: none;}
 
-        .section-open{
-            top: 3%;
-            left: 3%;
-        }
-
-        .section-close {
-            bottom: 3%;
-            left: 3%;
-        }
-
-        .aboutme {
-            font-size: 2rem;
-        }
-
-    }
-
-// SECTION
-    .skills {
-        position: relative;
-        display: grid;
-        align-items: center;
-        justify-content: center;
-
-        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-
-
-        .section-open, .section-close {
-            font-size: 3.5rem;
-            position: absolute;
-        }
-
-        .section-open{
-            top: 3%;
-            left: 3%;
-        }
-
-        .section-close {
-            bottom: 3%;
-            left: 3%;
-        }
-
-        .skill-group {
-            text-align: center;
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+        
+        .wrapper {
+            height: 200%;
+            width: 100%;
             display: flex;
             flex-direction: column;
-            justify-content: center;
             align-items: center;
             
-            
-            .skill {
-                font-size: .8rem;
+
+            .slide {
+                height: 100%;
                 display: flex;
-                justify-content: space-between;
-                align-items: center;
-                width: 70%;
-
+                flex-direction: column;
+                justify-content: center;
             }
-
         }
+    
         
     }
     
 }
 
-.section {
-    background-color: $atom-dark;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding: 0 150px 0 150px;
-    width: 100vw;
-    height: 100vh;
-}
-
-.tab {
-    padding-left: 4em;
-}
-
-.img {
-    width: 50px;
-    height: 50px;
-}
-
-.ctr {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 50px;
-}
+.h2 { font-size: 2rem}
+.h1 { font-size: 2.5rem;}
