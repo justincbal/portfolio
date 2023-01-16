@@ -76,6 +76,7 @@ html {
                 justify-content: center;
                 align-items: center;
 
+
                 &:hover {
                     background-color: #383d48;
                     border-radius: 25px;
@@ -91,26 +92,35 @@ html {
 
         > a{
             text-decoration: none;
+
+
         }
     
         .nav-item {
             border-right: black 1px solid;
             padding: 10px 25px;
             display: flex;
+            align-items: center;
+            
 
             .nav-img {
                 width: 65px;
                 height: 65px;
             }
 
-            .nav-title {
-                color: $atom-text;
+            .md {
+                width: 40px;
+                height: 40px;
+                margin-right: 1rem;
+
             }
 
-            &:hover {
-                background-color: $atom-background;
-                cursor: pointer;
+            .nav-title {
+                color: $atom-text;
+
             }
+
+            
         }
     }
 
@@ -119,6 +129,19 @@ html {
         background-color: $atom-background;
         flex-grow: 1;
         overflow-y: scroll;
+        display: flex;
+
+        .line-num {
+            
+
+            > h1 {
+                width: 50px;
+                text-align: center;
+                color: $atom-text;
+            }
+
+            
+        }
         
         scroll-behavior: smooth;
 
@@ -128,7 +151,7 @@ html {
         scrollbar-width: none;
         
         .wrapper {
-            height: 200%;
+            height: 300%;
             width: 100%;
             display: flex;
             flex-direction: column;
@@ -145,8 +168,22 @@ html {
     
         
     }
+
+    // Skills section
+    .skills {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        height: 100%;
+        width: 100%;
+        place-content: center;
+        place-items: center;
+    }
     
 }
 
 .h2 { font-size: 2rem}
 .h1 { font-size: 2.5rem;}
+.nav-active {
+    background-color: $atom-background;
+
+}
