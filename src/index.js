@@ -1,6 +1,8 @@
 import './styles/main.scss';
-import html from './'
+
 const navItem = document.querySelectorAll('.nav-item');
+
+
 
 navItem.forEach(item => {
     item.addEventListener('click', () => {
