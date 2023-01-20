@@ -1,5 +1,5 @@
 import './styles/main.scss';
-import './img/html-5.png';
+import html from './'
 const navItem = document.querySelectorAll('.nav-item');
 
 navItem.forEach(item => {
