@@ -8,7 +8,7 @@ module.exports = {
     },
     devServer: {
         static: {
-          directory: path.join(__dirname, 'public'),
+          directory: path.join(__dirname, './src/img/'),
         },
         compress: true,
         port: 9000,
